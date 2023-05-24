@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+h2{
+    width: 90%;
+    margin: 0 auto;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+h4{
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+a{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+body{
+    background-image: url('image/1297764.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*header*/
+header{
+    height: 70px;
+}
+header .main-header{
+    width: 90%;
+    margin: 0 auto;
+}
+header .main-header::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+header .logo a img{
+    padding: 2px 0;
+    float: left;
+}
+header .logo a img:hover{
+    cursor: pointer;
+}
+header .navbar ul{
+    float: left;
+}
+header .navbar ul li{
+    margin: 0;
+    padding: 24px 20px;
+    display: inline-block;
+}
+header .navbar ul li:hover{
+    transition: .5s;
+    background-color: rgba(255, 166, 0, 0.826);
+}
+header .playgame{
+    border: 2px solid #ffffff;
+    float: right;
+    margin: 15px;
+    border-radius: 50px;
+}
+header .playgame .linkplay{
+    display: inline-block;
+    padding: 10px 40px;
+}
+header .playgame:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+/*menu-samping*/
+.toggle-sidebar {
+    display: none;
+    border: none;
+    padding: 10px;
+    color: #f1f1f1;
+    background: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .sidebar {
+    height: 100vh;
+    width: 200px;
+    list-style: none;
+    background-color: #1dc9f09c;
+    position: fixed;
+    left: -200px;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  .sidebar-open {
+    left: 0;
+  }
+  .sidebar li a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid silver;
+  }
+  .sidebar li a:hover {
+    background-color: rgba(254, 182, 0, 0.8);
+  }
+
+  /*perubahan layar*/
+@media (max-width: 800px) {
+    .toggle-sidebar{
+        display: inline-block;
+    }
+    header .navbar ul{
+        display: none;
+    } 
+    .game-play-tab iframe{
+        width: auto;
+        height: auto;
+    }
+    header .playgame{
+        display: none;
+    }
+    
+}
+@media (min-width: 800px){
+    .sidebar{
+        display: none;
+    }
+    .banner .playgame-banner .linkplay-banner{
+        display: none;
+    }
+    .banner .playgame-banner {
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        display: none;
+        width: none;
+        padding: none;
+        justify-content: none;
+        margin: none;
+    }
+}
+
+/*section*/
+section{
+    padding: 10px 0;
+    width: 100%;
+}
+/*section banner*/
+.banner{
+    padding: 20% 0;
+    margin: -8.8% 0;
+}
+.banner video{
+    display: flex;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -26%;
+    z-index: -1;
+}
+.banner-inner{
+    padding-left: 25px ;
+    width: 90%;
+    margin: 0 auto;
+    color: #f1f1f1;
+}
+.banner .banner-inner img{
+    border-radius: 10px;
+    box-shadow: 0 3px 5px #fff;
+    margin-bottom: 3.2%;
+}
+.banner .playgame-banner{
+    background-color: rgba(117, 117, 117, 0.715);
+}
+.banner .playgame-banner .linkplay-banner {
+    border: solid #f1f1f1;
+    border-radius: 50px;
+    box-shadow: 0 3px 5px #000000;
+    background-color: rgb(255, 213, 0);
+    display: flex;
+    width:30%;
+    height: auto;
+    padding: 2% 1%;
+    justify-content: center;
+    margin: 3% auto;
+}
+.banner .playgame-banner .linkplay-banner a{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: medium;
+    color: #000000;
+    font-weight: 100;
+    text-decoration: none;
+    font-variant: small-caps;
+}
+.banner .playgame-banner .linkplay-banner a:hover{
+    color: rgb(255, 0, 0);
+}
+
+/*section news*/
+.news{
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* border: red solid;*/
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10%;
+    margin-top: -17%;
+}
+.news h2{
+   /* border: blue solid;*/
+    color: #f1f1f1;
+    margin: 5% auto;
+}
+.news-content{
+    border: black solid;
+    border-bottom:none ;
+    box-shadow: 5px 3px 5px rgb(255, 255, 255);
+    background-color: rgb(255, 224, 66, 0.5);
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+.news-content .slideshow-container {
+   /* border: green solid;*/
+    float: left;
+    width: 40%;
+    margin: 0 auto;
+}
+/* animasi fade */
+.slide-fade {
+    /*border: #003cff solid;*/
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+}
+ /* No.text (1/3 etc) */
+ .number {
+    color: #f2f2f2;
+}
+  
+  /* captions text */
+.captions{
+    float: right;
+    width: 50%;
+    margin: 0 auto;;
+    border-left: black solid;
+    /*border: rgb(255, 0, 255) solid;*/
+}
+.captions li{
+    text-decoration: none;
+}
+.text {
+    color: #f1f1f1;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5%;
+    font-size: medium;
+    list-style: none;
+    border-bottom: black solid;
+}  
+.captions ul li:hover {
+    background-color: rgb(255, 140, 0, 0.5);
+}
+/*section gameplay*/
+.game-play{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15% ;
+    width: 100%;
+    text-align: center;
+}
+.game-play h2{
+    border-left: 16px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px double rgb(255, 224, 66);
+    width: fit-content;
+    text-shadow: 0 3px 5px #fff; 
+}
+.game-play-tab{
+    font-size: 28px;
+    padding: 4% 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.game-play-info{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.578);
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    margin: 0 10%;
+    padding: 0.5%;
+}
+.game-play-tab iframe{
+    position: relative;
+}
+
+/*section about*/
+.about{
+    margin: 0 ;
+    padding: 6%;
+}
+.about h4{
+    color: #f1f1f1;
+    width: 90%;
+    padding-left: 1%;
+    border-left: 10px solid red;
+}
+.about-content {
+    background-image: url('image/bg-more.8eede21.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 1.5%;
+    display: flex;
+}
+.about p{
+   padding: 1%;
+   margin: 3%;
+   font-weight: 300;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #000000;
+}
+
+/*footer contact*/
+footer{
+    background-color: black;
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 40px;
+}
+footer h4{
+    padding-left: 2% ;
+    padding-bottom: 2% ;
+}
+.link-email{
+    padding: 2% 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.link-email a{
+    margin: 0 10%;
+    color: #f1f1f1;
+}
+.link-email a:hover{
+    color: rgb(0, 136, 255);
+    transition: 0.3s;
+}
+footer p{
+    padding: 2%;
+    padding-bottom: 3rem;
+    font-size: small;
+}
+
